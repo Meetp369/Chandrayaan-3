@@ -71,6 +71,14 @@ class GetDirectionAndPosition{
         }
     }
 
+    public void turnUpSide() {
+        if (direction.equals("N") || direction.equals("E")) {
+            direction = "Up";
+        } else if (direction.equals("S") || direction.equals("W")) {
+            direction = "Down";
+        }
+    }
+
 }
 public class Chandrayaan {
 
