@@ -105,7 +105,7 @@ public class ChandrayaanTest {
     }
 
     @Test
-    public void testExecuteCommands() {
+    public void test1() {
         
         String[] cmd = {"f", "r", "u", "b", "l"};
 
@@ -119,7 +119,7 @@ public class ChandrayaanTest {
         assertEquals("N", c.finalDirection);
     }
     @Test
-    public void testAnotherScenario() {
+    public void test2() {
         Commands c= new Commands();
         String[] cmd = {"f", "u", "r","b","d"};
         c.giveCommands(cmd);
