@@ -1,11 +1,15 @@
 /**
  * Chandrayaan
  */
+
+// GetDirectionAndPosition class for get direction and position
+
 class GetDirectionAndPosition{
     int x,y,z;
     String direction,lastDirection="";
 
-    
+    //constructor for intilization
+
     public GetDirectionAndPosition(int x,int y,int z,String direction){
 
         this.x=x;
@@ -15,6 +19,7 @@ class GetDirectionAndPosition{
 
     }
 
+    //move forward reference to x,y,z plane
     public void forward() {
         if (direction.equals("N")) {
             y++;
@@ -31,6 +36,7 @@ class GetDirectionAndPosition{
         }
     }
 
+    //move backword reference to x,y,z plane
     public void backward() {
         if (direction.equals("N")) {
             y--;
@@ -47,6 +53,7 @@ class GetDirectionAndPosition{
         }
     }
 
+    //turn left reference to x,y,z plane
     public void left() {
         if ((direction.equals("N")) || (lastDirection.equals("N"))){
             direction = "W";
@@ -59,6 +66,7 @@ class GetDirectionAndPosition{
         } 
     }
 
+    //turn right reference to x,y,z plane
     public void right() {
         if ((direction.equals("N"))|| (lastDirection.equals("N"))) {
             direction = "E";
@@ -71,6 +79,7 @@ class GetDirectionAndPosition{
         }
     }
 
+    //turn up reference to x,y,z plane
     public void turnUpSide() {
         if (direction.equals("N") || direction.equals("E")) {
             if(direction.equals("N")){
@@ -89,6 +98,8 @@ class GetDirectionAndPosition{
         }
     }
 
+
+    //turn down reference to x,y,z plane
     public void turnDownSide() {
         if (direction.equals("N") || direction.equals("E") ) {
             if(direction.equals("N")){
@@ -108,6 +119,7 @@ class GetDirectionAndPosition{
     }
 }
 
+// Commands class for passing command string array to GetDirectionAndPosition class
 class Commands {
     
     int finalX,finalY,finalZ;
@@ -149,6 +161,8 @@ class Commands {
 
     }
 }
+
+// main class
 public class Chandrayaan {
 
     public static void main(String[] args) {
