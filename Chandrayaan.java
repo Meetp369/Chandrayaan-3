@@ -15,6 +15,22 @@ class GetDirectionAndPosition{
 
     }
 
+    public void forward() {
+        if (direction.equals("N")) {
+            y++;
+        } else if (direction.equals("S")) {
+            y--;
+        } else if (direction.equals("E")) {
+            x++;
+        } else if (direction.equals("W")) {
+            x--;
+        } else if (direction.equals("Up")) {
+            z++;
+        } else if (direction.equals("Down")) {
+            z--;
+        }
+    }
+
 }
 public class Chandrayaan {
 
