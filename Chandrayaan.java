@@ -47,6 +47,18 @@ class GetDirectionAndPosition{
         }
     }
 
+    public void left() {
+        if (direction.equals("N")) {
+            direction = "W";
+        } else if (direction.equals("S")) {
+            direction = "E";
+        } else if (direction.equals("E")) {
+            direction = "N";
+        } else if (direction.equals("W")) {
+            direction = "S";
+        }
+    }
+
 }
 public class Chandrayaan {
 
