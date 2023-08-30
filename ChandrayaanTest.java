@@ -37,12 +37,23 @@ public class ChandrayaanTest {
     @Test
     public void turnLeft() {
         GetDirectionAndPosition gdp = new GetDirectionAndPosition(0, 0, 0, "N");
-        
+
         gdp.left();
 
         assertEquals(0, gdp.x);
         assertEquals(0, gdp.y);
         assertEquals(0, gdp.z);
         assertEquals("W", gdp.direction);
+    }
+
+    @Test
+    public void turnRight() {
+        GetDirectionAndPosition gdp = new GetDirectionAndPosition(0, 0, 0, "N");
+        gdp.right();
+
+        assertEquals(0, gdp.x);
+        assertEquals(0, gdp.y);
+        assertEquals(0, gdp.z);
+        assertEquals("E", gdp.direction);
     }
 }
