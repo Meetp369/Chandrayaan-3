@@ -103,4 +103,22 @@ public class ChandrayaanTest {
         assertEquals(0, gdp.z);
         assertEquals("Down", gdp.direction);
     }
+
+    @Test
+    public void testExecuteCommands() {
+        
+        String[] cmd = {"f", "r", "u", "b", "l"};
+
+        Commands c = new Commands();
+        c.giveCommands(cmd);
+
+        
+        assertEquals(0, c.finalX);
+        assertEquals(1, c.finalY);
+        assertEquals(-1, c.finalZ);
+        assertEquals("N", c.finalDirection);
+    }
+
+    
+
 }
